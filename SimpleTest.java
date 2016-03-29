@@ -23,7 +23,8 @@ public class SimpleTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 
-        WebElement searchField = driver.findElement(By.xpath(".//*[@id='search']/form/div[1]/div[2]/input"));
+        //WebElement searchField = driver.findElement(By.xpath(".//*[@id='search']/form/div[1]/div[2]/input"));
+		WebElement searchField = driver.findElement(By.cssSelector(".header-search-input-text.passive"));
         searchField.clear();
         searchField.sendKeys("iPhone 6s");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
